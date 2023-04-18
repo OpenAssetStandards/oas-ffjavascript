@@ -1,5 +1,5 @@
 {
-  "name": "oas-ffjavascript",
+  "name": "@zk2/ffjavascript",
   "description": "OAS fork of ffjavascript",
   "version": "0.2.57",
   "source": "src/main.js",
