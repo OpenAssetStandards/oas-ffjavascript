@@ -1,0 +1,55 @@
+{
+  "name": "oas-ffjavascript",
+  "description": "OAS fork of ffjavascript",
+  "version": "0.2.57",
+  "source": "src/main.js",
+  "main": "dist/main.umd.js",
+  "module": "dist/main.modern.module.js",
+  "unpkg": "dist/main.umd.js",
+  "types": "dist/main.d.ts",
+  "keywords": [
+    "microbundle",
+    "typescript"
+  ],
+  "files": [
+    "dist/**.js*",
+    "dist/**/*.ts"
+  ],
+  "scripts": {
+    "build": "microbundle --define PKG_VERSION=$npm_package_version",
+    "watch": "microbundle watch --define PKG_VERSION=$npm_package_version",
+    "test": "node --test test",
+    "lint": "prettier src test -c",
+    "format": "prettier src test --write",
+    "prepack": "rm -rf dist && npm run build",
+    "release": "npm run prepack && source .env && npx np"
+  },
+  "dependencies": {
+    "wasmbuilder": "0.0.16",
+    "wasmcurves": "0.2.0",
+    "web-worker": "^1.2.0"
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.1",
+    "prettier": "^2.8.7"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenAssetStandards/oas-ffjavascript.git"
+  },
+  "author": "Open Asset Standards",
+  "bugs": {
+    "url": "https://github.com/OpenAssetStandards/oas-ffjavascript/issues"
+  },
+  "homepage": "https://github.com/OpenAssetStandards/oas-ffjavascript#readme"
+}
