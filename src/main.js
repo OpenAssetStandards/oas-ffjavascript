@@ -9,6 +9,8 @@ export {default as F3Field} from "./f3field.js";
 
 export {default as ZqField} from "./f1field.js";
 
+export {default as RatField} from "./ratfield.js";
+
 export {default as EC} from "./ec.js";
 
 export {default as buildBn128} from "./bn128.js";

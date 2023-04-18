@@ -129,7 +129,6 @@ export default async function buildThreadManager(wasm, singleThread) {
         await Promise.all(initPromises);
 
     }
-    return tm;
 
     function getOnMsg(i) {
         return function(e) {
@@ -145,6 +144,8 @@ export default async function buildThreadManager(wasm, singleThread) {
             tm.processWorks();
         };
     }
+    return tm;
+
 
 }
 
